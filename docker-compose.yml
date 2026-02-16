@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  systemc:
+    build: .
+    image: ece576-hw2
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+
+  example:
+    build: .
+    image: ece576-hw2
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: bash -c "g++ -I. -I$$SYSTEMC/include -L. -L$$SYSTEMC/lib-linux64 -lsystemc example/hello.cpp && ./a.out"
