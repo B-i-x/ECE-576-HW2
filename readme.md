@@ -67,7 +67,7 @@ Compiles and runs the untimed SAD model against `memfile_Default.txt`:
 docker compose run --rm part1
 ```
 
-### Part 2 - Untimed SAD
+### Part 2 - Timed SAD
 
 Compiles and runs the untimed SAD model against `memfile_Default.txt`:
 

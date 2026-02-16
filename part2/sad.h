@@ -41,6 +41,9 @@ public:
             cout << "SAD[" << block << "] = " << sad_val << endl;
         }
 
+        cout << "Simulation time: " << sc_time_stamp() << endl;
+        cout << "Total clock cycles: " << sc_time_stamp() / sc_time(4, SC_NS) << endl;
+
         sc_stop();
     }
 };
