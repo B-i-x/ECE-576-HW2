@@ -39,7 +39,7 @@ To switch configurations, comment/uncomment the selector at the top of `config.h
 
 ## Memory Files
 
-Memory initialization files are stored in the `memory_files/` directory. These are whitespace-separated integer files that get loaded into the memory module at startup.
+Memory initialization files are stored in the `memory_files/` directory. 
 
 ### Generate a memory file
 
@@ -65,6 +65,14 @@ Compiles and runs the untimed SAD model against `memfile_Default.txt`:
 
 ```bash
 docker compose run --rm part1
+```
+
+### Part 2 - Untimed SAD
+
+Compiles and runs the untimed SAD model against `memfile_Default.txt`:
+
+```bash
+docker compose run --rm part2
 ```
 
 ### Hello World example
