@@ -1,3 +1,6 @@
+# Docker output folder
+output/
+
 # Prerequisites
 *.d
 

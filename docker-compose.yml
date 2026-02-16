@@ -16,4 +16,28 @@ services:
     volumes:
       - .:/workspace
     working_dir: /workspace
-    command: bash -c "g++ -I. -I$$SYSTEMC/include -L. -L$$SYSTEMC/lib-linux64 -lsystemc example/hello.cpp && ./a.out"
+    command: bash -c "mkdir -p output && g++ -I. -I$$SYSTEMC/include -L. -L$$SYSTEMC/lib-linux64 -lsystemc -o output/hello example/hello.cpp && ./output/hello"
+
+  generate-memfile:
+    build: .
+    image: ece576-hw2
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/memory_files
+    command: bash -c "mkdir -p ../output && g++ -o ../output/generate_memfile src/generate_memfile.cpp && ../output/generate_memfile"
+
+  generate-solution:
+    build: .
+    image: ece576-hw2
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/memory_files
+    command: bash -c "mkdir -p ../output && g++ -o ../output/memfile_solution_generator src/memfile_solution_generator.cpp && ../output/memfile_solution_generator memfile_Default.txt"
+
+  part1:
+    build: .
+    image: ece576-hw2
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/part1
+    command: bash -c "mkdir -p ../output && g++ -I. -I$$SYSTEMC/include -L. -L$$SYSTEMC/lib-linux64 -lsystemc main.cpp -o ../output/sad && ../output/sad ../memory_files/memfile_Default.txt"
