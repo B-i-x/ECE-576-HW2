@@ -4,7 +4,7 @@
 #include <systemc.h>
 #include <fstream>
 #include "simple_mem_if.h"
-#include "config.h"
+#include "../config/config.h"
 
 class memory : public sc_module, public simple_mem_if
 {

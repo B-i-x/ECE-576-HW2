@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "../../part1/config.h"
+#include "../../config/config.h"
 
 int main(int argc, char* argv[])
 {

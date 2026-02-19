@@ -3,7 +3,7 @@
 
 #include <systemc.h>
 #include "simple_mem_if.h"
-#include "config.h"
+#include "../config/config.h"
 #include "memory_rtl.h"
 
 class memory : public sc_module, public simple_mem_if

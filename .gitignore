@@ -33,3 +33,6 @@ output/
 *.exe
 *.out
 *.app
+
+# Generated Mem files
+*.txt

@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
-#include "../../part1/config.h"
+#include "../../config/config.h"
 
 int main()
 {

@@ -3,7 +3,7 @@
 
 #include <systemc.h>
 #include "simple_mem_if.h"
-#include "config.h"
+#include "../config/config.h"
 
 class sad : public sc_module
 {
