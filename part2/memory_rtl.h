@@ -3,7 +3,7 @@
 
 #include <systemc.h>
 #include <fstream>
-#include "config.h"
+#include "../config/config.h"
 
 class MEMORY_RTL : public sc_module
 {
