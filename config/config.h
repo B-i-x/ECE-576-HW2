@@ -30,4 +30,8 @@
 #error "No configuration selected. Define CONFIG_DEFAULT or CONFIG_CUSTOM in config.h"
 #endif
 
+//safety checks
+static_assert(INPUT2_ADDR > INPUT1_ADDR + NUM_BLOCKS * BLOCK_SIZE, "Addresses overlap, increase INPUT2_ADDR");
+static_assert(MEM_SIZE > INPUT2_ADDR + NUM_BLOCKS * BLOCK_SIZE, "Address overlaps memory limit, increase MEM_SIZE");
+
 #endif
