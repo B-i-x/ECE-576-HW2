@@ -3,7 +3,7 @@
 
 #include <systemc.h>
 #include "simple_mem_if.h"
-#include "../config/config.h"
+#include "config.h"
 
 /*
 For approximate timed model adding 10ns delay to all operations
